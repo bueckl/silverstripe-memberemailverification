@@ -94,7 +94,9 @@ class EmailVerificationMemberExtension extends DataExtension {
             $admin_email = 'admin@domain.com';
         }
 
-        $sender_email = self::get_formatted_email($site_title, $admin_email);
+        //$sender_email = self::get_formatted_email($site_title, $admin_email);
+        $sender_email = $admin_email;
+        
         $recipient_email = $this->owner->Email;
 
         $email_to_recipient = Email::create($sender_email, $recipient_email, $email_subject);
