@@ -55,12 +55,12 @@ class EmailVerificationSecurityExtension extends Extension {
                     _t('MemberEmailVerification.VALIDATEEMAILFAIL',
                         "Email verification failed. This may be due to an incorrect verification string, please ensure you copy and paste the entire link. If this problem persists, please contact us.") .
                     '</p>'
-            ))->renderWith(array('Security_validate_email_fail', 'Security', 'Page'));
+            ))->renderWith(array('Security','Security_validate_email_fail', 'Page'));
         }
 
         $member->Verified = true;
         $member->write();
-
+        
         return $controller->customise(array(
             'Content' =>
                 '<p>' .
@@ -72,7 +72,7 @@ class EmailVerificationSecurityExtension extends Extension {
                     )
                 ) .
                 '</p>'
-        ))->renderWith(array('Security_validate_email_success', 'Security', 'Page'));
+        ))->renderWith(array('Security','Security_validate_email_success'));
     }
 
     /**
