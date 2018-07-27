@@ -78,7 +78,6 @@ class EmailVerificationMemberExtension extends DataExtension {
         $email_template_data = array(
             'Member' => $this->owner,
             'ValidationLink' => $validation_link,
-            'LoginLink' => Director::absoluteURL('/en/exhibitors');
             'SiteConfig' => $site_config
         );
 
