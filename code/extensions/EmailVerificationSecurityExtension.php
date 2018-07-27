@@ -68,7 +68,7 @@ class EmailVerificationSecurityExtension extends Extension {
                     'MemberEmailVerification.VALIDATEEMAILSUCCESS',
                     "Your email has been successfully verified. You can now {login_link} to the website.",
                     array(
-                        'login_link' => '<a href="/Security/login">log in</a>'
+                        'login_link' => '<a href="/en/exhibitors">log in</a>'
                     )
                 ) .
                 '</p>'
